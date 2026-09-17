@@ -1,0 +1,20 @@
+Index: dungeon/Forest_of_dispair.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package dungeon;\n\nimport java.lang.module.ModuleFinder;\nimport java.util.ArrayList;\n\nimport characters.Character;\nimport characters.Team;\nimport characters.bosses.DarkElfQueen;\nimport characters.enemies.*;\n\n\npublic class Forest_of_dispair extends Dungeon {\n    Mimic1 mimic1 = new Mimic1();\n    Mimic2 mimic2 = new Mimic2();\n    Mimic3 mimic3 = new Mimic3();\n    DarkElfQueen darkElfQueen = new DarkElfQueen();\n\n    public Forest_of_dispair() {\n        super(\n                \"Forest of Dispair\",\n                0,\n                new ArrayList<>(),\n                null,\n                null,\n                null,\n                false);\n\n        generateDungeon();\n\n\n        if (!getRoom().isEmpty()) {\n            updateRoomNavigation(0);\n        }\n    }\n\n    private void generateDungeon() {\n\n        ArrayList<Character> enemies1 = new ArrayList<>();\n        enemies1.add(mimic1);\n        enemies1.add(mimic1);\n        enemies1.add(mimic1);\n\n        ArrayList<Character> enemies2 = new ArrayList<>();\n        enemies2.add(mimic2);\n        enemies2.add(mimic2);\n        enemies2.add(mimic2);\n\n        ArrayList<Character> enemies3 = new ArrayList<>();\n        enemies2.add(mimic3);\n        enemies2.add(mimic3);\n        enemies2.add(mimic3);\n\n        ArrayList<Character> enemies4 = new ArrayList<>();\n        enemies4.add(darkElfQueen);\n        enemies4.add(darkElfQueen);\n        enemies4.add(darkElfQueen);\n\n        Room first_room = new Room(\"First room\", 0, \"Forest\", enemies4);\n        Room second_room = new Room(\"Second room\", 1, \"Forest\", enemies2);\n        Room third_room = new Room(\"Third room\", 2, \"Forest\", enemies3);\n        Room boss_room = new Room(\"Boss Room\", 3, \"Forest\", enemies4);\n\n        addRoom(first_room);\n        addRoom(second_room);\n        addRoom(third_room);\n        addRoom(boss_room);\n\n\n\n        System.out.println(\"Dungeon '\" + getName() + \"' generated with \" + getRoom().size() + \" rooms\");\n        System.out.println(enemies1);\n        System.out.println(enemies2);\n        System.out.println(enemies3);\n        System.out.println(enemies4);\n\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dungeon/Forest_of_dispair.java b/dungeon/Forest_of_dispair.java
+--- a/dungeon/Forest_of_dispair.java	(revision 16a2930fa0b90fbd2345be27bb59993cb8596777)
++++ b/dungeon/Forest_of_dispair.java	(date 1763650402125)
+@@ -10,9 +10,6 @@
+ 
+ 
+ public class Forest_of_dispair extends Dungeon {
+-    Mimic1 mimic1 = new Mimic1();
+-    Mimic2 mimic2 = new Mimic2();
+-    Mimic3 mimic3 = new Mimic3();
+     DarkElfQueen darkElfQueen = new DarkElfQueen();
+ 
+     public Forest_of_dispair() {

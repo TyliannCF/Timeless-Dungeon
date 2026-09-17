@@ -1,0 +1,11 @@
+*.class
+out/*
+/.idea/*.*
+/.idea/workspace.xml
+workspace.xml
+.DS_Store
+AnimationTest.java.old
+EnchantressTest.java.old
+SummonDemo.java.old
+ObsoleteTests.java
+*:Zone.identifier
